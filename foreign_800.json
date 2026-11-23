@@ -1,0 +1,306 @@
+{
+  "calSn": "20240805094624468281233",
+  "policyRiskItems": [
+    {
+      "itemAmounts": [
+        {
+          "code": "001",
+          "itemAmount": 8000000,
+          "itemAmountType": null,
+          "maxLimit": null
+        },
+        {
+          "code": "002",
+          "itemAmount": 8000000,
+          "itemAmountType": null,
+          "maxLimit": null
+        },
+        {
+          "code": "069",
+          "itemAmount": 4000000.0,
+          "itemAmountType": null,
+          "maxLimit": null
+        }
+      ],
+      "code": "I000000485",
+      "deductible": null,
+      "deductibleDesc": null
+    },
+    {
+      "itemAmounts": [
+        {
+          "code": "003",
+          "itemAmount": 800000,
+          "itemAmountType": null,
+          "maxLimit": null
+        }
+      ],
+      "code": "I000000486",
+      "deductible": null,
+      "deductibleDesc": null
+    },
+    {
+      "itemAmounts": [
+        {
+          "code": "0411",
+          "itemAmount": 800000,
+          "itemAmountType": null,
+          "maxLimit": null
+        },
+        {
+          "code": "041",
+          "itemAmount": 800000,
+          "itemAmountType": null,
+          "maxLimit": null
+        },
+        {
+          "code": "042",
+          "itemAmount": 80000,
+          "itemAmountType": null,
+          "maxLimit": null
+        },
+        {
+          "code": "043",
+          "itemAmount": 80000,
+          "itemAmountType": null,
+          "maxLimit": null
+        }
+      ],
+      "code": "I000000487",
+      "deductible": null,
+      "deductibleDesc": null
+    },
+    {
+      "itemAmounts": [
+        {
+          "code": "044",
+          "itemAmount": 100000,
+          "itemAmountType": null,
+          "maxLimit": null
+        },
+        {
+          "code": "045",
+          "itemAmount": 100000,
+          "itemAmountType": null,
+          "maxLimit": null
+        },
+        {
+          "code": "046",
+          "itemAmount": 1500000,
+          "itemAmountType": null,
+          "maxLimit": null
+        },
+        {
+          "code": "047",
+          "itemAmount": 200000,
+          "itemAmountType": null,
+          "maxLimit": null
+        },
+        {
+          "code": "048",
+          "itemAmount": 200000,
+          "itemAmountType": null,
+          "maxLimit": null
+        }
+      ],
+      "code": "I000000502",
+      "deductible": null,
+      "deductibleDesc": null
+    },
+    {
+      "itemAmounts": [
+        {
+          "code": "013",
+          "itemAmount": 1000000,
+          "itemAmountType": null,
+          "maxLimit": null
+        }
+      ],
+      "code": "I000000494",
+      "deductible": null,
+      "deductibleDesc": null
+    },
+    {
+      "itemAmounts": [
+        {
+          "code": "116",
+          "itemAmount": 50000,
+          "itemAmountType": null,
+          "maxLimit": null
+        }
+      ],
+      "code": "I000000495",
+      "deductible": null,
+      "deductibleDesc": null
+    },
+    {
+      "itemAmounts": [
+        {
+          "code": "033",
+          "itemAmount": 3000,
+          "itemAmountType": null,
+          "maxLimit": null
+        }
+      ],
+      "code": "I000000496",
+      "deductible": null,
+      "deductibleDesc": null
+    },
+    {
+      "itemAmounts": [
+        {
+          "code": "038",
+          "itemAmount": 3000,
+          "itemAmountType": null,
+          "maxLimit": null
+        }
+      ],
+      "code": "I000000497",
+      "deductible": null,
+      "deductibleDesc": null
+    },
+    {
+      "itemAmounts": [
+        {
+          "code": "087",
+          "itemAmount": 20000,
+          "itemAmountType": null,
+          "maxLimit": null
+        }
+      ],
+      "code": "I000000498",
+      "deductible": null,
+      "deductibleDesc": null
+    },
+    {
+      "itemAmounts": [
+        {
+          "code": "036",
+          "itemAmount": 100000,
+          "itemAmountType": null,
+          "maxLimit": null
+        }
+      ],
+      "code": "I000000499",
+      "deductible": null,
+      "deductibleDesc": null
+    },
+    {
+      "itemAmounts": [
+        {
+          "code": "115",
+          "itemAmount": 5000,
+          "itemAmountType": null,
+          "maxLimit": null
+        }
+      ],
+      "code": "I000000500",
+      "deductible": null,
+      "deductibleDesc": null
+    },
+    {
+      "itemAmounts": [
+        {
+          "code": "037",
+          "itemAmount": 3000,
+          "itemAmountType": null,
+          "maxLimit": null
+        }
+      ],
+      "code": "I000000501",
+      "deductible": null,
+      "deductibleDesc": null
+    },
+    {
+      "itemAmounts": [
+        {
+          "code": "082",
+          "itemAmount": 60000,
+          "itemAmountType": null,
+          "maxLimit": null
+        }
+      ],
+      "code": "I000000488",
+      "deductible": null,
+      "deductibleDesc": null
+    },
+    {
+      "itemAmounts": [
+        {
+          "code": "032",
+          "itemAmount": 10000,
+          "itemAmountType": null,
+          "maxLimit": null
+        }
+      ],
+      "code": "I000000489",
+      "deductible": null,
+      "deductibleDesc": null
+    },
+    {
+      "itemAmounts": [
+        {
+          "code": "035",
+          "itemAmount": 60000,
+          "itemAmountType": null,
+          "maxLimit": null
+        }
+      ],
+      "code": "I000000490",
+      "deductible": null,
+      "deductibleDesc": null
+    },
+    {
+      "itemAmounts": [
+        {
+          "code": "081",
+          "itemAmount": 10000,
+          "itemAmountType": null,
+          "maxLimit": null
+        }
+      ],
+      "code": "I000000491",
+      "deductible": null,
+      "deductibleDesc": null
+    },
+    {
+      "itemAmounts": [
+        {
+          "code": "080",
+          "itemAmount": 10000,
+          "itemAmountType": null,
+          "maxLimit": null
+        }
+      ],
+      "code": "I000000492",
+      "deductible": null,
+      "deductibleDesc": null
+    },
+    {
+      "itemAmounts": [
+        {
+          "code": "079",
+          "itemAmount": 6000,
+          "itemAmountType": null,
+          "maxLimit": null
+        }
+      ],
+      "code": "I000000493",
+      "deductible": null,
+      "deductibleDesc": null
+    }
+  ],
+  "productTypeCode": "CTA",
+  "effDateTime": "2027-08-12T00:00:00.000",
+  "expDateTime": "2027-08-20T00:00:00.000",
+  "installment": "A",
+  "projectCode": null,
+  "renewFlag": "N",
+  "travelAreaType": "F",
+  "agentChannelType": "40",
+  "age": 18,
+  "birthday": "2009-08-05",
+  "occupationLevel": null,
+  "planCodes": null,
+  "sex": "MALE"
+}

@@ -1,0 +1,37 @@
+{
+  "calSn": "20240805093933523612131",
+  "policyRiskItems": [
+    {
+      "itemAmounts": [
+        {
+          "code": "001",
+          "itemAmount": 8000000,
+          "itemAmountType": null,
+          "maxLimit": null
+        },
+        {
+          "code": "002",
+          "itemAmount": 8000000,
+          "itemAmountType": null,
+          "maxLimit": null
+        }
+      ],
+      "code": "I000000032",
+      "deductible": null,
+      "deductibleDesc": null
+    }
+  ],
+  "productTypeCode": "CTA",
+  "effDateTime": "2027-08-12T00:00:00.000",
+  "expDateTime": "2027-08-15T00:00:00.000",
+  "installment": "A",
+  "projectCode": null,
+  "renewFlag": "N",
+  "travelAreaType": "T",
+  "agentChannelType": "40",
+  "age": 18,
+  "birthday": "2009-08-05",
+  "occupationLevel": null,
+  "planCodes": null,
+  "sex": "MALE"
+}
