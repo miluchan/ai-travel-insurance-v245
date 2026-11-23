@@ -1094,7 +1094,7 @@ function showIssuedPolicyNotice(jid,z){
  <p>您的旅遊保險保單已成立。</p>
  <div class="policy-grid"><div><b>保單號碼</b><span>${z.policy_no||"－"}</span></div><div><b>狀態</b><span>已出單</span></div><div><b>商品</b><span>${((z.insurer_name||"")+" "+(z.product_name||"")).trim()||"－"}</span></div></div>
  <div class="policy-warning"><b>電子保單寄送說明</b><br>電子保單將寄送至要保人投保時留存的電子郵件信箱；實際寄送方式與時間以正式上線規則為準。<br><small>Prototype：目前僅模擬出單與寄送說明，不實際寄送 Email。</small></div>
- <div class="travel-actions"><button id="issuedFinish" type="button" style="background:#e7eef5;color:#173b5e;border:1px solid #b8c9d9;font-weight:700">暫不進入旅程服務</button><button id="issuedTravel" class="apply-now">進入旅程服務</button></div>`;
+ <div class="travel-actions"><button id="issuedFinish" class="secondary-btn">結束</button><button id="issuedTravel" class="apply-now">進入旅程服務</button></div>`;
  $("#issuedFinish").onclick=()=>box.remove();
  $("#issuedTravel").onclick=()=>window.v222OpenTravelMode({journey_id:jid,policy_no:z.policy_no,insurer_name:z.insurer_name,product_name:z.product_name});
  box.scrollIntoView({behavior:"smooth"});
@@ -2412,8 +2412,17 @@ window.v222OpenTravelMode=async function(x={}){
   </div>
   <div id="tmPanel" style="margin-top:18px;padding:16px;border:1px solid #d9e4ec;border-radius:12px"><b>AI：</b>目前有 ${open.length} 件未完成服務案件。請選擇需要的協助。</div>
   <div style="margin-top:16px;padding:14px;background:#f8fafb;border-radius:12px"><b>服務案件</b><div id="tmCases">${cases.length?cases.map(c=>`<div style="padding:8px 0;border-bottom:1px solid #e6edf2">${c.service_type==="CLAIM"?"理賠":c.service_type==="EMERGENCY"?"緊急協助":"班機事件"}｜${c.status==="OPEN"?"處理中":"已完成"} ${(!s.closed&&c.status==="OPEN")?`<button class="tmDone secondary" data-id="${c.service_id}">標示完成</button>`:""}</div>`).join(""):"<p>目前沒有服務案件。</p>"}</div></div>
-  <div style="margin-top:18px;padding:14px;border:1px solid #d9e4ec;border-radius:12px"><b>旅程結案</b><p style="margin:6px 0">${s.closed?"本旅程已結案，保單與服務紀錄仍保留於歷史查詢。":s.can_close?"所有服務案件均已完成，可以結案。":esc2(s.close_reason||"旅程服務中。")}</p>${s.can_close?'<div style="display:flex;gap:10px;margin-top:10px"><button id="tmKeepJourney" type="button" style="flex:1;background:#e7eef5;color:#173b5e;border:1px solid #b8c9d9;font-weight:700">暫不結案</button><button id="tmCloseJourney" type="button" style="flex:1">確認結案</button></div>':""}</div>`;
-  d.querySelector("#tmClose").onclick=()=>o.remove();
+  <div style="margin-top:18px;padding:14px;border:1px solid #d9e4ec;border-radius:12px"><b>旅程結案</b><p style="margin:6px 0">${s.closed?"本旅程已結案，保單與服務紀錄仍保留於歷史查詢。":s.can_close?"所有服務案件均已完成，可以結案。":esc2(s.close_reason||"旅程服務中。")}</p>${s.can_close?'<button id="tmCloseJourney">確認結案</button>':""}</div>`;
+  d.querySelector("#tmClose").onclick=async()=>{
+    if(s.closed){o.remove();return}
+    if(s.can_close){
+      if(!confirm("所有服務案件均已完成。是否確認旅程結案？"))return;
+      let rr=await fetch("/api/v230/travel/"+encodeURIComponent(jid)+"/close",{method:"POST"}),zz=await rr.json();
+      if(!rr.ok||!zz.ok){alert(zz.error||"結案失敗");return}
+      o.remove();return;
+    }
+    o.remove();
+  };
   const panel=d.querySelector("#tmPanel");
   d.querySelectorAll(".tmSvc").forEach(b=>b.onclick=async()=>{
    if(s.closed){
@@ -2448,7 +2457,6 @@ window.v222OpenTravelMode=async function(x={}){
     let rr=await fetch("/api/v230/travel/"+encodeURIComponent(jid)+"/service-case/"+encodeURIComponent(b.dataset.id)+"/complete",{method:"POST"}),zz=await rr.json();
     if(!rr.ok||!zz.ok){alert(zz.error||"更新失敗");return} await load();
   });
-  d.querySelector("#tmKeepJourney")?.addEventListener("click",()=>o.remove());
   d.querySelector("#tmCloseJourney")?.addEventListener("click",async()=>{
     if(!confirm("確認本旅程沒有未完成的事故、理賠或服務需求，並將案件結案？"))return;
     let rr=await fetch("/api/v230/travel/"+encodeURIComponent(jid)+"/close",{method:"POST"}),zz=await rr.json();
