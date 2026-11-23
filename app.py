@@ -15,10 +15,7 @@ from ai.travel_agent import update_profile,empty_profile
 from ai.rate_engine import quote, tier_options, scenario_for
 from datetime import datetime
 from pathlib import Path
-app=Flask(__name__)
-app.secret_key=os.environ.get("FLASK_SECRET_KEY") or ("local-development-only-key" if not os.environ.get("VERCEL") else "")
-if not app.secret_key:
-    raise RuntimeError("FLASK_SECRET_KEY must be set for cloud deployment")
+app=Flask(__name__);app.secret_key="v12-local"
 @app.get("/")
 def index():return render_template("index.html")
 
@@ -1462,4 +1459,4 @@ def v230_close(jid):
     finally:c.close()
 
 if __name__=="__main__":
-    app.run(host="127.0.0.1",port=5000,debug=os.getenv("FLASK_DEBUG", "0") == "1")
+    app.run(host="127.0.0.1",port=5000,debug=True)
